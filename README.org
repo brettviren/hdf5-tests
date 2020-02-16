@@ -1,0 +1,37 @@
+#+title: HDF5 Tests
+
+* Prerequisites
+
+Tests assume:
+
+- HDF5 1.10.6 (source from h5cpp.org)
+- h5cpp 
+
+** Install HDF5
+
+  #+begin_example
+    $ wget http://h5cpp.org/download/hdf5-1.10.6.tar.gz
+    $ tar -xf hdf5-1.10.6.tar.gz
+    $ cd hdf5-1.10.6/
+    $ ./configure --prefix=$HOME/opt/hdf5
+    $ make -j4 && make install
+  #+end_example
+
+Straightforward but many many warnings.
+
+** Install h5cpp
+
+   #+begin_example
+     $ wget http://h5cpp.org/download/h5cpp-full_1.10.4-5.tar.gz
+     $ tar -xf h5cpp-full_1.10.4-5.tar.gz
+     $ mv usr $HOME/opt/h5cpp
+   #+end_example
+
+* Install
+
+There's not much to install per se but the tests build and run with Waf
+
+#+begin_example
+  $ waf configure
+  $ waf
+#+end_example
