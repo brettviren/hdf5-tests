@@ -35,3 +35,16 @@ There's not much to install per se but the tests build and run with Waf
   $ waf configure
   $ waf
 #+end_example
+
+
+* Tests
+
+Tests are run as
+
+#+begin_example
+  $ ./build/test-[name] [options]
+#+end_example
+
+- crash :: abort after various steps to see what shape the resulting file is left.  After "flush", file appears to be okay without an explicit close.
+- serialize speed :: give an HDF5 file name and a number.  It reads it and serializes to "file image".
+

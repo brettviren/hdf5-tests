@@ -24,7 +24,7 @@ def configure(cfg):
     cfg.check_cxx(
         msg = "Checking for HDF5",
         header_name = ["hdf5.h", "hdf5_hl.h"],
-        lib = ['hdf5_hl', 'hdf5'],
+        lib = ['hdf5_hl', 'hdf5', 'z'],
         uselib_store = 'HDF5',
         use = ['HDF5'],
     )
